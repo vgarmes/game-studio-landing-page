@@ -1,7 +1,14 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      let value = window.scrollY
+    }
+    window.addEventListener("scroll", handleScroll)
+    return window.removeEventListener("scroll", handleScroll)
+  }, [])
   return (
     <header className="hero">
       <section className="parallax">
@@ -36,14 +43,16 @@ const Hero = () => {
         ></StaticImage>
 
         <StaticImage
-          src="../assets/images/parallax/layer03_Hills_Castle.png"
-          alt="hills and a castle"
+          src="../assets/images/parallax/layer08_Dragon.png"
+          alt="dragon"
           style={{ position: "absolute" }}
           className="parallax-img"
-          id="hills-castle"
+          id="dragon"
           placeholder="blurred"
           layout="fullWidth"
         ></StaticImage>
+
+        <h2 id="hero-title">super cool games</h2>
 
         <StaticImage
           src="../assets/images/parallax/layer02_Trees_rocks.png"
@@ -51,6 +60,16 @@ const Hero = () => {
           style={{ position: "absolute" }}
           className="parallax-img"
           id="trees-rocks"
+          placeholder="blurred"
+          layout="fullWidth"
+        ></StaticImage>
+
+        <StaticImage
+          src="../assets/images/parallax/layer08_Character.png"
+          alt="character"
+          style={{ position: "absolute" }}
+          className="parallax-img"
+          id="character"
           placeholder="blurred"
           layout="fullWidth"
         ></StaticImage>
@@ -64,6 +83,23 @@ const Hero = () => {
           placeholder="blurred"
           layout="fullWidth"
         ></StaticImage>
+
+        <a href="#" class="btn-hero">
+          Explore
+        </a>
+      </section>
+
+      <section class="sec">
+        <h2>Parallax Effect</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nulla
+          cupiditate est unde minima aliquam deleniti ea ut nam adipisci
+          molestias ducimus ipsa aspernatur maiores dolore, labore amet
+          quisquam!<br></br>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt fuga et
+          inventore eius reprehenderit itaque modi minus veniam, excepturi porro
+          corrupti officia? A impedit rem cumque facere dolorem aperiam eaque!
+        </p>
       </section>
     </header>
   )

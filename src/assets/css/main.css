@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
 
 :root {
   --clr-cyan: rgba(100, 200, 212, 1);
@@ -18,6 +19,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -88,12 +90,60 @@ ul {
   width: 100%;
   height: 120vh;
   padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.parallax::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--clr-cyan), transparent);
+  z-index: 100;
+}
 .parallax-img {
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+#hero-title {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Sigmar One";
+  font-size: 7.5vw;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 10;
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  background: var(--clr-cyan);
+}
+
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sec p {
+  font-size: 1.2em;
+  color: #fff;
 }
