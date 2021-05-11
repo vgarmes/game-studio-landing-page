@@ -49,7 +49,8 @@ ul {
 .navbar .logo {
   color: #ffff;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1.5em;
+  font-family: "Sigmar One";
   text-transform: uppercase;
   letter-spacing: 2px;
 }

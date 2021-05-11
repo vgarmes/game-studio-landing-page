@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <a href="#" className="logo">
-        Logo
+        supercool games
       </a>
       <ul>
         <li>
