@@ -49,7 +49,7 @@ ul {
 .navbar .logo {
   color: #ffff;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-family: "Sigmar One";
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -58,9 +58,7 @@ ul {
 .navbar ul {
   height: 0;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: none;
 }
 
 .navbar ul li {
@@ -79,9 +77,12 @@ ul {
   color: var(--clr-cyan);
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .navbar ul {
     height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
