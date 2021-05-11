@@ -189,3 +189,34 @@ ul {
   font-size: 1.2em;
   color: black;
 }
+
+/* ============== */
+/* FOOTER */
+/* ============== */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 9rem;
+  background: #222;
+  text-align: center;
+}
+.footer h4 {
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.footer h4 span {
+  color: cadetblue;
+}
+.footer-links {
+  margin: 0 auto 1rem auto;
+}
+.footer .social-link {
+  font-size: 2rem;
+  color: white;
+}
+.footer .social-link:hover {
+  color: grey;
+}
