@@ -1,0 +1,10 @@
+{
+  "title": "Dummy game",
+  "platforms": ["PS4","Switch","Steam"],
+  "description": "This is a dummy game",
+  "reviews": {
+    "author":"GamersPro",
+    "score": "9/10",
+    "summary": "Game of the year."
+  }
+}
