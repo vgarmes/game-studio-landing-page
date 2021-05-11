@@ -39,11 +39,11 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 100px;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .navbar .logo {
@@ -55,13 +55,15 @@ ul {
 }
 
 .navbar ul {
+  height: 0;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .navbar ul li {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
 .navbar ul li a {
@@ -76,21 +78,28 @@ ul {
   color: var(--clr-cyan);
 }
 
+@media screen and (min-width: 600px) {
+  .navbar ul {
+    height: 3rem;
+  }
+}
+
 /* ============== */
 /* HERO SECTION */
 /* ============== */
 
 .hero {
-  min-height: 120vh;
+  min-height: 110vh;
   background-image: url("../images/parallax/layer07_Sky.png");
 }
 
 .parallax {
   position: relative;
   width: 100%;
-  height: 120vh;
+  height: 110vh;
   padding: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -100,50 +109,82 @@ ul {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
-  background: linear-gradient(to top, var(--clr-cyan), transparent);
+  height: 4rem;
+  background: linear-gradient(to top, white, transparent);
   z-index: 100;
 }
+
 .parallax-img {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+}
+
+.parallax-img-character {
+  position: absolute;
+  bottom: 21%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.parallax-img-dragon {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 600px) {
+  .parallax-img-character {
+    left: 60%;
+    transform: translateX(0);
+  }
 }
 
 #hero-title {
   position: absolute;
   color: #fff;
-  white-space: nowrap;
   text-transform: uppercase;
   font-family: "Sigmar One";
-  font-size: 7.5vw;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3em;
+  z-index: 1;
+}
+
+@media screen and (min-width: 600px) {
+  #hero-title {
+    font-size: 4.5rem;
+  }
 }
 
 .btn-hero {
+  position: absolute;
+  margin-top: 15em;
   display: inline-block;
   padding: 8px 30px;
   border-radius: 40px;
-  background: #fff;
-  color: #2b1055;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
   font-size: 1.5em;
-  z-index: 10;
+  z-index: 1;
 }
 
 .sec {
   position: relative;
   padding: 100px;
-  background: var(--clr-cyan);
+  background: white;
 }
 
 .sec h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
-  color: #fff;
+  color: black;
 }
 
 .sec p {
   font-size: 1.2em;
-  color: #fff;
+  color: black;
 }

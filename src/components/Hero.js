@@ -1,14 +1,19 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
+  const [scrollAmount, setScrollAmount] = useState(0)
+
+  const handleScroll = () => {
+    setScrollAmount(window.scrollY)
+    console.log(`${window.scrollY}px`)
+  }
+
   useEffect(() => {
-    const handleScroll = () => {
-      let value = window.scrollY
-    }
     window.addEventListener("scroll", handleScroll)
     return window.removeEventListener("scroll", handleScroll)
   }, [])
+
   return (
     <header className="hero">
       <section className="parallax">
@@ -17,18 +22,10 @@ const Hero = () => {
           alt="rocks"
           style={{ position: "absolute" }}
           className="parallax-img"
-          id="rocks"
-          placeholder="blurred"
-          layout="fullWidth"
-        ></StaticImage>
-
-        <StaticImage
-          src="../assets/images/parallax/layer05_Hills.png"
-          alt="hills"
-          style={{ position: "absolute" }}
-          className="parallax-img"
-          id="hills"
-          placeholder="blurred"
+          imgStyle={{
+            top: `${0.25 * scrollAmount}px`,
+          }}
+          placeholder="none"
           layout="fullWidth"
         ></StaticImage>
 
@@ -37,41 +34,54 @@ const Hero = () => {
           alt="clouds"
           style={{ position: "absolute" }}
           className="parallax-img"
-          id="clouds"
-          placeholder="blurred"
+          imgStyle={{
+            top: `${0.25 * scrollAmount}px`,
+          }}
+          placeholder="none"
+        ></StaticImage>
+
+        <StaticImage
+          src="../assets/images/parallax/layer05_Hills.png"
+          alt="hills"
+          style={{ position: "absolute" }}
+          className="parallax-img"
+          placeholder="none"
           layout="fullWidth"
         ></StaticImage>
 
         <StaticImage
-          src="../assets/images/parallax/layer08_Dragon.png"
+          src="../assets/images/parallax/dragon.png"
           alt="dragon"
           style={{ position: "absolute" }}
-          className="parallax-img"
-          id="dragon"
-          placeholder="blurred"
-          layout="fullWidth"
+          className="parallax-img-dragon"
+          placeholder="none"
+          layout="fixed"
+          width={250}
         ></StaticImage>
 
-        <h2 id="hero-title">super cool games</h2>
+        <h2 id="hero-title">
+          we are
+          <br />
+          supercool games
+        </h2>
 
         <StaticImage
           src="../assets/images/parallax/layer02_Trees_rocks.png"
           alt="trees and rocks"
           style={{ position: "absolute" }}
           className="parallax-img"
-          id="trees-rocks"
-          placeholder="blurred"
+          placeholder="none"
           layout="fullWidth"
         ></StaticImage>
 
         <StaticImage
-          src="../assets/images/parallax/layer08_Character.png"
+          src="../assets/images/parallax/character.png"
           alt="character"
           style={{ position: "absolute" }}
-          className="parallax-img"
-          id="character"
-          placeholder="blurred"
-          layout="fullWidth"
+          className="parallax-img-character"
+          placeholder="none"
+          layout="fixed"
+          width={200}
         ></StaticImage>
 
         <StaticImage
@@ -79,17 +89,16 @@ const Hero = () => {
           alt="ground"
           style={{ position: "absolute" }}
           className="parallax-img"
-          id="ground"
-          placeholder="blurred"
+          placeholder="none"
           layout="fullWidth"
         ></StaticImage>
 
-        <a href="#" class="btn-hero">
+        <a href="#" className="btn-hero">
           Explore
         </a>
       </section>
 
-      <section class="sec">
+      <section className="sec">
         <h2>Parallax Effect</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nulla
