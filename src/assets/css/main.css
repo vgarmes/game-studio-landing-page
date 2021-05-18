@@ -3,6 +3,7 @@
 
 :root {
   --clr-cyan: rgba(100, 200, 212, 1);
+  --transition: all 0.3s linear;
 }
 
 *,
@@ -28,6 +29,12 @@ a {
 
 ul {
   list-style: none;
+}
+
+.wrapper {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1280px;
 }
 
 /* ============== */
@@ -189,6 +196,91 @@ ul {
 .sec p {
   font-size: 1.2em;
   color: black;
+}
+
+/* ============== */
+/* GAMES */
+/* ============== */
+
+.game {
+  display: flex;
+  margin-bottom: 4em;
+  width: 100%;
+}
+
+.game-img {
+  width: 20%;
+  height: 19rem;
+}
+
+.game-info {
+  width: 80%;
+  padding: 1em 2em;
+}
+
+.game-reviews {
+  margin: 0 auto;
+  /*margin-top: 4rem;*/
+  width: 100%;
+  /* have to have a height */
+  height: 10em;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.game-review {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.game-review.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.game-review.lastSlide {
+  transform: translateX(-100%);
+}
+
+.game-review.nextSlide {
+  transform: translateX(100%);
+}
+
+.btn-prev,
+.btn-next {
+  position: absolute;
+  top: 200px;
+  transform: translateY(-50%);
+  background: var(--clr-grey-5);
+  color: var(--clr-white);
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  border-color: transparent;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-prev:hover,
+.btn-next:hover {
+  background: var(--clr-primary-5);
+}
+.btn-prev {
+  left: 0;
+}
+.btn-next {
+  right: 0;
 }
 
 /* ============== */
