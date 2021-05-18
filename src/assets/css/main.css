@@ -42,9 +42,7 @@ ul {
 /* ============== */
 
 .navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   width: 100%;
   padding: 1rem 2rem;
   display: flex;
@@ -98,62 +96,19 @@ ul {
 /* ============== */
 
 .hero {
-  min-height: 110vh;
-  background-image: url("../images/parallax/layer07_Sky.png");
+  min-height: 100vh;
+  background-color: var(--clr-cyan);
 }
 
-.parallax {
-  position: relative;
-  width: 100%;
-  height: 110vh;
-  padding: 100px;
+.hero__text {
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: center;
   align-items: center;
 }
 
-.parallax::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 4rem;
-  background: linear-gradient(to top, white, transparent);
-  z-index: 100;
-}
-
-.parallax-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.parallax-img-character {
-  position: absolute;
-  bottom: 21%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.parallax-img-dragon {
-  position: absolute;
-  top: 0;
-  left: 30%;
-  transform: translateX(-50%);
-}
-
-@media screen and (min-width: 600px) {
-  .parallax-img-character {
-    left: 60%;
-    transform: translateX(0);
-  }
-}
-
-#hero-title {
-  position: absolute;
+.hero-title {
   color: #fff;
   text-transform: uppercase;
   font-family: "Sigmar One";
@@ -170,15 +125,12 @@ ul {
 }
 
 .btn-hero {
-  position: absolute;
-  margin-top: 15em;
   display: inline-block;
   padding: 8px 30px;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.8);
   color: black;
   font-size: 1.5em;
-  z-index: 1;
 }
 
 .sec {

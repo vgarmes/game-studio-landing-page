@@ -15,90 +15,23 @@ const Hero = () => {
   }, [])
 
   return (
-    <header className="hero">
-      <section className="parallax">
-        <StaticImage
-          src="../assets/images/parallax/layer06_Rocks.png"
-          alt="rocks"
-          style={{ position: "absolute" }}
-          className="parallax-img"
-          imgStyle={{
-            top: `${0.25 * scrollAmount}px`,
-          }}
-          placeholder="none"
-          layout="fullWidth"
-        ></StaticImage>
+    <>
+      <header className="hero">
+        <div className="wrapper">
+          <div className="hero__text">
+            <h2 className="hero-title">
+              we are
+              <br />
+              supercool games
+            </h2>
+            <a href="#" className="btn-hero">
+              Explore
+            </a>
+          </div>
+        </div>
+      </header>
 
-        <StaticImage
-          src="../assets/images/parallax/layer04_Clouds.png"
-          alt="clouds"
-          style={{ position: "absolute" }}
-          className="parallax-img"
-          imgStyle={{
-            top: `${0.25 * scrollAmount}px`,
-          }}
-          placeholder="none"
-        ></StaticImage>
-
-        <StaticImage
-          src="../assets/images/parallax/layer05_Hills.png"
-          alt="hills"
-          style={{ position: "absolute" }}
-          className="parallax-img"
-          placeholder="none"
-          layout="fullWidth"
-        ></StaticImage>
-
-        <StaticImage
-          src="../assets/images/parallax/dragon.png"
-          alt="dragon"
-          style={{ position: "absolute" }}
-          className="parallax-img-dragon"
-          placeholder="none"
-          layout="fixed"
-          width={250}
-        ></StaticImage>
-
-        <h2 id="hero-title">
-          we are
-          <br />
-          supercool games
-        </h2>
-
-        <StaticImage
-          src="../assets/images/parallax/layer02_Trees_rocks.png"
-          alt="trees and rocks"
-          style={{ position: "absolute" }}
-          className="parallax-img"
-          placeholder="none"
-          layout="fullWidth"
-        ></StaticImage>
-
-        <StaticImage
-          src="../assets/images/parallax/character.png"
-          alt="character"
-          style={{ position: "absolute" }}
-          className="parallax-img-character"
-          placeholder="none"
-          layout="fixed"
-          width={200}
-        ></StaticImage>
-
-        <StaticImage
-          src="../assets/images/parallax/layer01_Ground.png"
-          alt="ground"
-          style={{ position: "absolute" }}
-          className="parallax-img"
-          placeholder="none"
-          layout="fullWidth"
-        ></StaticImage>
-
-        <a href="#" className="btn-hero">
-          Explore
-        </a>
-      </section>
-
-      <section className="sec">
+      <main className="sec">
         <h2>Parallax Effect</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nulla
@@ -109,8 +42,8 @@ const Hero = () => {
           inventore eius reprehenderit itaque modi minus veniam, excepturi porro
           corrupti officia? A impedit rem cumque facere dolorem aperiam eaque!
         </p>
-      </section>
-    </header>
+      </main>
+    </>
   )
 }
 
