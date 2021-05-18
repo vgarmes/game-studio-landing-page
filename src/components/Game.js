@@ -25,10 +25,6 @@ const Game = ({
           <h3>{title}</h3>
         </Link>
         <h4>Relased: {release_date}</h4>
-        <p className="game-description">{description}</p>
-        <div className="game-reviews">
-          <ReviewsSlider reviews_data={reviews} />
-        </div>
       </div>
     </article>
   )
