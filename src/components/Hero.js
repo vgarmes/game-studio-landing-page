@@ -24,24 +24,27 @@ const Hero = () => {
               <br />
               supercool games
             </h2>
-            <a href="#" className="btn-hero">
+            <a href="#" className="btn btn-hero">
               Explore
             </a>
           </div>
         </div>
       </header>
 
-      <main className="sec">
-        <h2>Parallax Effect</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nulla
-          cupiditate est unde minima aliquam deleniti ea ut nam adipisci
-          molestias ducimus ipsa aspernatur maiores dolore, labore amet
-          quisquam!<br></br>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt fuga et
-          inventore eius reprehenderit itaque modi minus veniam, excepturi porro
-          corrupti officia? A impedit rem cumque facere dolorem aperiam eaque!
-        </p>
+      <main className="section">
+        <div className="wrapper">
+          <h2>Sample Text</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos
+            nulla cupiditate est unde minima aliquam deleniti ea ut nam adipisci
+            molestias ducimus ipsa aspernatur maiores dolore, labore amet
+            quisquam!<br></br>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt fuga
+            et inventore eius reprehenderit itaque modi minus veniam, excepturi
+            porro corrupti officia? A impedit rem cumque facere dolorem aperiam
+            eaque!
+          </p>
+        </div>
       </main>
     </>
   )

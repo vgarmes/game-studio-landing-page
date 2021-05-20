@@ -15,16 +15,17 @@ const Game = ({
   const slug = slugify(title, { lower: true })
   return (
     <article className="game">
-      <GatsbyImage
-        image={getImage(cover.localFile)}
-        className="game-img"
-        alt={title}
-      />
+      <div className="game-img">
+        <GatsbyImage image={getImage(cover.localFile)} alt={title} />
+      </div>
       <div className="game-info">
         <Link to={`/${slug}`}>
           <h3>{title}</h3>
         </Link>
-        <h4>Relased: {release_date}</h4>
+        <p>{description}</p>
+        <a href="#" className="btn btn-game">
+          Visit
+        </a>
       </div>
     </article>
   )

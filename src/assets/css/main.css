@@ -31,10 +31,19 @@ ul {
   list-style: none;
 }
 
+img {
+  max-width: 100%;
+}
 .wrapper {
   width: 90vw;
   margin: 0 auto;
   max-width: 1280px;
+}
+.btn {
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  font-size: 1.5em;
 }
 
 /* ============== */
@@ -125,27 +134,18 @@ ul {
 }
 
 .btn-hero {
-  display: inline-block;
-  padding: 8px 30px;
-  border-radius: 40px;
   background: rgba(255, 255, 255, 0.8);
   color: black;
-  font-size: 1.5em;
 }
 
-.sec {
-  position: relative;
-  padding: 100px;
-  background: white;
-}
-
-.sec h2 {
+.section h2 {
   font-size: 3.5em;
   margin-bottom: 10px;
   color: black;
+  text-transform: capitalize;
 }
 
-.sec p {
+.section p {
   font-size: 1.2em;
   color: black;
 }
@@ -156,18 +156,40 @@ ul {
 
 .game {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
   margin-bottom: 4em;
   width: 100%;
 }
 
+.game:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
 .game-img {
-  width: 20%;
-  height: 19rem;
+  width: 100%;
+  border: 1px solid red;
 }
 
 .game-info {
-  width: 80%;
+  width: 100%;
   padding: 1em 2em;
+  border: 1px solid red;
+}
+
+.game-info h3 {
+  font-size: 2.5rem;
+  color: black;
+}
+
+.btn-game {
+  background-color: var(--clr-cyan);
+  color: black;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .game-reviews {
