@@ -169,18 +169,21 @@ img {
 
 .game-img {
   width: 100%;
-  border: 1px solid red;
 }
 
 .game-info {
   width: 100%;
   padding: 1em 2em;
-  border: 1px solid red;
 }
 
 .game-info h3 {
   font-size: 2.5rem;
   color: black;
+  margin-bottom: 1em;
+}
+
+.game-info p {
+  margin-bottom: 2em;
 }
 
 .btn-game {
