@@ -31,10 +31,9 @@ const Hero = () => {
         </div>
       </header>
 
-      <main className="section">
+      <main className="section hero-about">
         <div className="wrapper">
-          <h2 className="section-title">Sample Text</h2>
-          <div className="underline"></div>
+          <h3>We turn bold ideas into great games</h3>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos
             nulla cupiditate est unde minima aliquam deleniti ea ut nam adipisci
