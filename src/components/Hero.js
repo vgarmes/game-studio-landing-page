@@ -33,7 +33,8 @@ const Hero = () => {
 
       <main className="section">
         <div className="wrapper">
-          <h2>Sample Text</h2>
+          <h2 className="section-title">Sample Text</h2>
+          <div className="underline"></div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos
             nulla cupiditate est unde minima aliquam deleniti ea ut nam adipisci

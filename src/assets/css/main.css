@@ -46,6 +46,22 @@ img {
   font-size: 1.5em;
 }
 
+.section {
+  margin-top: 3em;
+}
+
+.section-title {
+  text-align: center;
+}
+.underline {
+  width: 10rem;
+  height: 0.5rem;
+  margin-bottom: 3rem;
+  background: var(--clr-cyan);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ============== */
 /* NAVBAR */
 /* ============== */
