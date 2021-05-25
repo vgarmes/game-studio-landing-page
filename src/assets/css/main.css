@@ -34,6 +34,11 @@ ul {
 img {
   max-width: 100%;
 }
+
+button {
+  cursor: pointer;
+}
+
 .wrapper {
   width: 90vw;
   margin: 0 auto;
@@ -176,6 +181,100 @@ img {
   text-align: center;
 }
 
+.featured-games-gallery-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 570px;
+  margin-top: 72px;
+}
+
+.featured-games-gallery-container .item-container {
+  position: relative;
+  height: 100%;
+}
+
+.featured-games-gallery-container .gallery-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.featured-games-gallery-container .gallery-item.activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.featured-games-gallery-container .gallery-item.lastSlide {
+  transform: translateX(-100%);
+}
+
+.featured-games-gallery-container .gallery-item.nextSlide {
+  transform: translateX(100%);
+}
+
+.gallery-item__picture {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d6d6;
+}
+
+.gallery-item__picture img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item__text {
+  flex-basis: 33%;
+  max-width: 67%;
+  margin-left: 8%;
+  color: white;
+  padding-bottom: 120px;
+}
+
+.gallery-item__text h3 {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.gallery-item__text p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.paddlenav {
+  margin-left: 8%;
+  position: absolute;
+  bottom: 50px;
+}
+
+.paddlenav ul {
+  display: flex;
+}
+
+.paddlenav-arrow {
+  background: none;
+  border: none;
+  font-size: 2.25rem;
+  color: #fff;
+}
+
+.paddlenav-item + .paddlenav-item {
+  margin-left: 10px;
+}
+
 /* ============== */
 /* GAMES */
 /* ============== */
@@ -221,12 +320,13 @@ img {
 }
 
 .btn-game {
-  background-color: var(--clr-cyan);
+  background-color: #fff;
   color: black;
   text-transform: uppercase;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500;
   letter-spacing: 2px;
+  margin-top: 30px;
 }
 
 .game-reviews {
