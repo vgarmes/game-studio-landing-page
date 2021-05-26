@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import Hero from "../components/Hero"
 import About from "../components/About"
 import GamesGallery from "../components/GamesGallery"
-import GamesButton from "../components/GamesButton"
+import SeeAllGames from "../components/SeeAllGames"
 import JoinUs from "../components/JoinUs"
 
 const Home = ({ data }) => {
@@ -12,7 +12,7 @@ const Home = ({ data }) => {
       <Hero />
       <About />
       <GamesGallery />
-      <GamesButton />
+      <SeeAllGames />
       <JoinUs />
     </Layout>
   )
