@@ -32,7 +32,7 @@ const games = ({ data }) => {
                   <div className="card-content">
                     <h2 className="card-title">{title}</h2>
                     <p className="card-body">{short_description}</p>
-                    <Link to={`/${slug}`} className="btn btn-game">
+                    <Link to={`/games/${slug}`} className="btn btn-game">
                       See more
                     </Link>
                   </div>

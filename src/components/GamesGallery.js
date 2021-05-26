@@ -101,7 +101,7 @@ const GamesGallery = () => {
               <div className="gallery-item__text">
                 <h3>{title}</h3>
                 <p>Short description</p>
-                <Link to={`/${slug}`} className="btn btn-game">
+                <Link to={`/games/${slug}`} className="btn btn-game">
                   See more
                 </Link>
               </div>
