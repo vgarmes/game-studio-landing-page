@@ -3,6 +3,7 @@
 
 :root {
   --clr-primary: rgba(100, 200, 212, 1);
+  --clr-neutral-9: #1d1d1f;
   --transition: all 0.3s linear;
 }
 
@@ -92,13 +93,13 @@ a {
 /* ============== */
 
 .navbar {
-  position: fixed;
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 0.5em 2em;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  background-color: var(--clr-neutral-9);
 }
 
 .navbar .logo {
@@ -122,19 +123,18 @@ a {
 
 .nav__link {
   padding: 6px 15px;
-  color: #fff;
+  color: #808080;
   border-radius: 20px;
 }
 
 .nav__link:hover,
 .nav__link.active-button {
-  background: #fff;
-  color: var(--clr-primary);
+  color: #fff;
 }
 
 @media screen and (min-width: 900px) {
   .navbar ul {
-    height: 3rem;
+    height: 1em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,10 +292,10 @@ a {
 
 .btn-games {
   font-size: 1rem;
-  color: #1d1d1f;
-  border: 1px solid #1d1d1f;
+  color: var(--clr-neutral-9);
+  border: 1px solid var(--clr-neutral-9);
   min-width: 26px;
-  margin: 18px auto 37px;
+  margin: 40px auto;
 }
 
 .btn-careers {
@@ -309,6 +309,69 @@ a {
 /* ============== */
 /* GAMES */
 /* ============== */
+
+.all-games-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.game-card {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+  height: 20em;
+  border-radius: 0.5rem;
+  overflow: hidden; /* so card content respects the radius */
+  transition: transform 0.5s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1.5em;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 1)
+  );
+  transform: translateY(60%);
+  transition: transform 500ms ease;
+}
+
+.card-content > *:not(.card-title) {
+  opacity: 0;
+  transition: opacity 500ms linear;
+}
+
+.game-card:hover .card-content {
+  transform: translateY(0);
+}
+
+.game-card:hover .card-content > *:not(.card-title) {
+  opacity: 1;
+  transition-delay: 250ms;
+}
+
+.card-title {
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.card-body {
+  color: rgba(255, 255, 255, 0.95);
+}
+.card-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
 .game {
   display: flex;
