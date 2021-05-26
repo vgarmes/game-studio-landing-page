@@ -35,6 +35,10 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   width: 90vw;
   margin: 0 auto;
@@ -116,14 +120,14 @@ button {
   margin-left: 1rem;
 }
 
-.navbar ul li a {
+.nav__link {
   padding: 6px 15px;
   color: #fff;
   border-radius: 20px;
 }
 
-.navbar ul li a:hover,
-.navbar ul li a.active-button {
+.nav__link:hover,
+.nav__link.active-button {
   background: #fff;
   color: var(--clr-primary);
 }
