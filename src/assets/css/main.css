@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
 
 :root {
-  --clr-cyan: rgba(100, 200, 212, 1);
+  --clr-primary: rgba(100, 200, 212, 1);
   --transition: all 0.3s linear;
 }
 
@@ -125,7 +125,7 @@ button {
 .navbar ul li a:hover,
 .navbar ul li a.active-button {
   background: #fff;
-  color: var(--clr-cyan);
+  color: var(--clr-primary);
 }
 
 @media screen and (min-width: 900px) {
@@ -143,7 +143,7 @@ button {
 
 .hero {
   min-height: 100vh;
-  background-color: var(--clr-cyan);
+  background-color: var(--clr-primary);
 }
 
 .hero__text {
@@ -290,6 +290,14 @@ button {
   font-size: 1rem;
   color: #1d1d1f;
   border: 1px solid #1d1d1f;
+  min-width: 26px;
+  margin: 18px auto 37px;
+}
+
+.btn-careers {
+  font-size: 1rem;
+  color: #fff;
+  background: var(--clr-primary);
   min-width: 26px;
   margin: 18px auto 37px;
 }
