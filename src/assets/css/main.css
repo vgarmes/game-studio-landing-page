@@ -23,10 +23,6 @@ body {
   scroll-behavior: smooth;
 }
 
-a {
-  text-decoration: none;
-}
-
 ul {
   list-style: none;
 }
@@ -42,41 +38,49 @@ button {
 .wrapper {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1280px;
-}
-.btn {
-  display: inline-block;
-  padding: 8px 30px;
-  border-radius: 40px;
-  font-size: 1.5em;
 }
 
-.section {
+@media screen and (min-width: 734px) {
+  .wrapper {
+    width: 692px;
+  }
+}
+
+@media screen and (min-width: 1068px) {
+  .wrapper {
+    width: 980px;
+  }
+}
+
+.cta-wrapper {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 22px;
+  border-radius: 980px;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.section-content {
   margin-top: 4em;
 }
 
-.section h2 {
-  font-size: 3.5em;
-  margin-bottom: 10px;
+.section__headline {
+  font-size: 4rem;
   color: black;
   text-transform: capitalize;
-}
-
-.section p {
-  font-size: 1.2em;
-  color: black;
-}
-
-.section-title {
   text-align: center;
+  margin-bottom: 0.5em;
 }
-.underline {
-  width: 10rem;
-  height: 0.5rem;
-  margin-bottom: 3rem;
-  background: var(--clr-cyan);
-  margin-left: auto;
-  margin-right: auto;
+
+.section__text {
+  text-align: center;
+  margin: 0 auto;
+  color: black;
+  width: 90%;
 }
 
 /* ============== */
@@ -134,7 +138,7 @@ button {
 }
 
 /* ============== */
-/* HERO SECTION */
+/* HERO PAGE */
 /* ============== */
 
 .hero {
@@ -169,16 +173,6 @@ button {
 .btn-hero {
   background: rgba(255, 255, 255, 0.8);
   color: black;
-}
-
-.hero-about h3 {
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 1em;
-}
-
-.hero-about p {
-  text-align: center;
 }
 
 .featured-games-gallery-container {
@@ -236,6 +230,21 @@ button {
   height: 100%;
 }
 
+.gallery-item__picture::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 1)
+  );
+  opacity: 0.6;
+}
+
 .gallery-item__text {
   /*flex-basis: 33%;*/
   position: absolute;
@@ -275,6 +284,14 @@ button {
 
 .paddlenav-item + .paddlenav-item {
   margin-left: 10px;
+}
+
+.btn-games {
+  font-size: 1rem;
+  color: #1d1d1f;
+  border: 1px solid #1d1d1f;
+  min-width: 26px;
+  margin: 18px auto 37px;
 }
 
 /* ============== */
