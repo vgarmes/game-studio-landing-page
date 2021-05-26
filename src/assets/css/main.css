@@ -204,7 +204,7 @@ button {
   display: flex;
   justify-content: flex-end;
   flex-direction: column;
-  transition: var(--transition);
+  transition: all 0.5s linear;
 }
 
 .featured-games-gallery-container .gallery-item.activeSlide {
