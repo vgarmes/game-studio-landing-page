@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const About = () => {
   return (
@@ -16,6 +17,11 @@ const About = () => {
           inventore eius reprehenderit itaque modi minus veniam, excepturi porro
           corrupti officia? A impedit rem cumque facere dolorem aperiam eaque!
         </p>
+        <div className="cta-wrapper">
+          <Link to="/games" className="btn btn-games">
+            See all games
+          </Link>
+        </div>
       </div>
     </main>
   )
