@@ -1,22 +1,12 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 
 const Navbar = () => {
-  const [scrollAmount, setScrollAmount] = useState(0)
-  const navRef = useRef(null)
-
-  const onScroll = () => {
-    setScrollAmount(window.scrollY)
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll)
-    return () => window.removeEventListener("scroll", onScroll)
-  }, [])
   return (
-    <nav className="navbar" ref={navRef}>
-      <a href="#" className="logo">
+    <nav className="navbar">
+      <Link to="/" className="logo">
         supercool games
-      </a>
+      </Link>
       <ul>
         <li>
           <Link to="/" className="nav__link active-button">
