@@ -25,6 +25,7 @@ const query = graphql`
         }
         title
         description
+        short_description
         featured
         cover {
           localFile {
@@ -74,7 +75,7 @@ const GamesGallery = () => {
     <div className="featured-games-gallery-container">
       <div className="item-container">
         {games.map((game, gameIndex) => {
-          const { id, title, description, desktop_picture } = game
+          const { id, title, short_description, desktop_picture } = game
           const image = getImage(desktop_picture.localFile)
           const slug = slugify(title, { lower: true })
 
@@ -100,7 +101,7 @@ const GamesGallery = () => {
 
               <div className="gallery-item__text">
                 <h3>{title}</h3>
-                <p>Short description</p>
+                <p>{short_description}</p>
                 <Link to={`/games/${slug}`} className="btn btn-game">
                   See more
                 </Link>
