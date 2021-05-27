@@ -4,7 +4,8 @@ import Hero from "../components/Hero"
 import About from "../components/About"
 import GamesGallery from "../components/GamesGallery"
 import SeeAllGames from "../components/SeeAllGames"
-import JoinUs from "../components/JoinUs"
+import CareersSection from "../components/CareersSection"
+import Services from "../components/Services"
 import SEO from "../components/SEO"
 
 const Home = () => {
@@ -13,9 +14,7 @@ const Home = () => {
       <SEO title="Home" />
       <Hero />
       <About />
-      <GamesGallery />
-      <SeeAllGames />
-      <JoinUs />
+      <CareersSection />
     </Layout>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import GamesGallery from "./GamesGallery"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Hero = () => {
   const [scrollAmount, setScrollAmount] = useState(0)
@@ -16,7 +16,20 @@ const Hero = () => {
 
   return (
     <>
-      <GamesGallery />
+      <header className="hero">
+        <div className="wrapper">
+          <div className="hero__text">
+            <h2 className="hero-title">
+              we are
+              <br />
+              supercool games
+            </h2>
+            <a href="#" className="btn btn-hero">
+              Explore
+            </a>
+          </div>
+        </div>
+      </header>
     </>
   )
 }
