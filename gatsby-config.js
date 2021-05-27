@@ -6,6 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: "Supercool Games",
+    description: "Games developer in Copenhagen",
+    author: "@vgmestre",
+  },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
