@@ -17,11 +17,11 @@ const SEO = ({ title, description }) => {
   const { site } = useStaticQuery(query)
   const metaDescription = description || site.siteMetadata.description
   return (
-    <Helmet>
+    <Helmet
       htmlAttributes={{ lang: "en" }}
       title={`${title} | ${site.siteMetadata.title}`}
       meta={[{ name: `description`, content: metaDescription }]}
-    </Helmet>
+    ></Helmet>
   )
 }
 
