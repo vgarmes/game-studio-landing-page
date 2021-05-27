@@ -45,6 +45,11 @@ a {
   margin: 0 auto;
 }
 
+.flex-wrapper {
+  width: 100%;
+  display: flex;
+}
+
 @media screen and (min-width: 734px) {
   .wrapper {
     width: 692px;
@@ -95,7 +100,8 @@ a {
 
 .navbar {
   width: 100%;
-  padding: 0.5em 2em;
+  padding: 0 3em;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,9 +189,8 @@ a {
 .featured-games-gallery-container {
   position: relative;
   overflow: hidden;
-  height: 100vh;
+  height: calc(100vh - 3rem);
   min-height: 570px;
-  margin-top: 72px;
 }
 
 .featured-games-gallery-container .item-container {
@@ -299,12 +304,53 @@ a {
   margin: 40px auto;
 }
 
+.services-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.services-item {
+  width: 30%;
+}
+
+.section-content.careers {
+  position: relative;
+  height: 450px;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.careers-content .section__headline {
+  color: #fff;
+}
+
+.careers-content .section__text {
+  color: #fff;
+}
+
 .btn-careers {
   font-size: 1rem;
   color: #fff;
   background: var(--clr-primary);
   min-width: 26px;
-  margin: 18px auto 37px;
+  margin-top: 3em;
+}
+
+.careers-image-container {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.careers-image {
+  object-position: top;
 }
 
 /* ============== */
