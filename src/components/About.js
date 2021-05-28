@@ -18,7 +18,7 @@ const About = () => {
           corrupti officia? A impedit rem cumque facere dolorem aperiam eaque!
         </p>
         <div className="cta-wrapper">
-          <Link to="/games" className="btn btn-games">
+          <Link to="/games" className="btn btn-cta">
             See all games
           </Link>
         </div>
