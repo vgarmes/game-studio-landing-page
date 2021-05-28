@@ -3,6 +3,8 @@
 
 :root {
   --clr-primary: rgba(100, 200, 212, 1);
+  --clr-primary-2: #f73558;
+  --clr-accent-2: #f84969;
   --clr-neutral-9: #1d1d1f;
   --transition: all 0.3s linear;
 }
@@ -296,12 +298,16 @@ a {
   margin-left: 10px;
 }
 
-.btn-games {
+.btn-cta {
   font-size: 1rem;
-  color: var(--clr-neutral-9);
-  border: 1px solid var(--clr-neutral-9);
+  color: #fff;
   min-width: 26px;
   margin: 40px auto;
+  background-color: #f73558;
+}
+
+.btn-cta:hover {
+  background-color: #f84969;
 }
 
 .services-container {
@@ -312,6 +318,28 @@ a {
 .services-item {
   width: 30%;
   text-align: center;
+}
+
+.services-title {
+  color: var(--clr-primary-2);
+}
+
+.services-headline {
+  color: black;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-image-container {
+  width: 50%;
+}
+
+.team-content {
+  width: 50%;
+  padding: 2em;
 }
 
 .section-content.careers {
@@ -331,14 +359,6 @@ a {
 
 .careers-content .section__text {
   color: #fff;
-}
-
-.btn-careers {
-  font-size: 1rem;
-  color: #fff;
-  background: var(--clr-primary);
-  min-width: 26px;
-  margin-top: 3em;
 }
 
 .careers-image-container {
@@ -489,10 +509,8 @@ a {
 .btn-game {
   background-color: #fff;
   color: black;
-  text-transform: uppercase;
   font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 2px;
   margin-top: 30px;
 }
 
