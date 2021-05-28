@@ -13,7 +13,7 @@ const CareersSection = () => {
             openings!
           </p>
           <div className="cta-wrapper">
-            <Link to="/careers" className="btn btn-careers">
+            <Link to="/careers" className="btn btn-cta">
               See job openings
             </Link>
           </div>
