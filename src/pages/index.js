@@ -4,6 +4,7 @@ import Hero from "../components/Hero"
 import About from "../components/About"
 import CareersSection from "../components/CareersSection"
 import Culture from "../components/Culture"
+import TeamSection from "../components/TeamSection"
 import SEO from "../components/SEO"
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <SEO title="Home" />
       <Hero />
       <About />
+      <TeamSection />
       <Culture />
       <CareersSection />
     </Layout>
