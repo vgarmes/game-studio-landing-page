@@ -15,19 +15,18 @@ const Services = () => {
             </p>
           </div>
           <div className="services-item">
-            <h3 className="services-title">Games</h3>
-            <p className="services-headline">Fun as a core</p>
+            <h4 className="services-title">Teams</h4>
+            <h3 className="services-headline">A common vision</h3>
             <p className="services-body">
-              We design entertainment. That's the pillar on which we build this
-              business.
+              We share the same goals and collaborate creatively to reach them.
             </p>
           </div>
           <div className="services-item">
-            <h3 className="services-title">Games</h3>
-            <p className="services-headline">Fun as a core</p>
+            <h4 className="services-title">Values</h4>
+            <h3 className="services-headline">Excellence in our work</h3>
             <p className="services-body">
-              We design entertainment. That's the pillar on which we build this
-              business.
+              Critical spirit, communication and honesty allow us to constantly
+              surpass ourselves.
             </p>
           </div>
         </div>
