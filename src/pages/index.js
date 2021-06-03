@@ -5,12 +5,12 @@ import About from "../components/About"
 import CareersSection from "../components/CareersSection"
 import Culture from "../components/Culture"
 import TeamSection from "../components/TeamSection"
-import SEO from "../components/SEO"
+import Seo from "../components/Seo"
 
 const Home = () => {
   return (
     <Layout>
-      <SEO title="Home" />
+      <Seo title="Home" />
       <Hero />
       <About />
       <TeamSection />
