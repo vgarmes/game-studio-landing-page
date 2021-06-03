@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import logo from "../assets/images/logo_192x192.png"
 
@@ -9,18 +9,22 @@ const Navbar = () => {
     { title: "About", url: "/about" },
     { title: "Career", url: "/careers" },
   ]
+
+  const [openSidenav, setOpenSidenav] = useState(false)
+
   return (
-    <nav className="navbar">
+    <nav className={openSidenav ? `navbar ${"sidebar-open"}` : "navbar"}>
       <Link to="/" className="logo-desktop">
         supercool games
       </Link>
       <Link to="/" className="logo-phone">
         <img src={logo} alt="supercool games" />
       </Link>
-      <ul>
+
+      <ul className="nav__list">
         {navLinks.map(({ title, url }, index) => {
           return (
-            <li key={index}>
+            <li key={index} className="nav__item">
               <Link
                 to={url}
                 className="nav__link"
@@ -33,28 +37,29 @@ const Navbar = () => {
         })}
       </ul>
 
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
+      <button
+        className="nav-toggle"
+        aria-label="toggle navigation"
+        onClick={() => setOpenSidenav(!openSidenav)}
+      >
+        <span className="hamburger"></span>
       </button>
-      <div class="nav-phone">
-        <div id="nav__close-layer"></div>
-        <div class="nav__sidebar">
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#about">
-                <h1>About me</h1>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#portfolio">
-                <h1>Projects</h1>
-              </a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#contact">
-                <h1>Contact</h1>
-              </a>
-            </li>
+      <div className="nav-phone">
+        <div className="nav__sidebar">
+          <ul className="sidebar__list">
+            {navLinks.map(({ title, url }, index) => {
+              return (
+                <li key={index} className="sidebar__item">
+                  <Link
+                    to={url}
+                    className="sidebar__link"
+                    activeClassName="active-button"
+                  >
+                    {title}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </div>
       </div>
