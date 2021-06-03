@@ -53,7 +53,7 @@ const Navbar = () => {
                   <Link
                     to={url}
                     className="sidebar__link"
-                    activeClassName="active-button"
+                    onClick={() => setOpenSidenav(false)}
                   >
                     {title}
                   </Link>

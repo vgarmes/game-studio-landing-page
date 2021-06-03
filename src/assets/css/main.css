@@ -251,6 +251,10 @@ a {
   .nav-toggle {
     visibility: hidden;
   }
+
+  .sidebar-open .nav-toggle {
+    visibility: visible;
+  }
 }
 
 .sidebar-open .nav-phone {
