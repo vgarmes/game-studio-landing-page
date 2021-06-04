@@ -6,11 +6,11 @@ import "../assets/css/main.css"
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className="site">
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 
