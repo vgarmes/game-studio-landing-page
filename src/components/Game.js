@@ -1,33 +1,56 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import ReviewsSlider from "./ReviewsSlider"
-import slugify from "slugify"
+import PlatformIcon from "./PlatformIcon"
 import { Link } from "gatsby"
+import { SiPlaystation4, SiNintendoswitch, SiSteam } from "react-icons/si"
 
 const Game = ({
   platforms,
   reviews,
   title,
   description,
-  cover,
+  short_description,
+  desktop_picture,
   release_date,
 }) => {
-  const slug = slugify(title, { lower: true })
   return (
-    <article className="game">
-      <div className="game-img">
-        <GatsbyImage image={getImage(cover.localFile)} alt={title} />
+    <section className="section-content single-game">
+      <GatsbyImage
+        className="game-image"
+        imgStyle={{ objectPosition: "top" }}
+        image={getImage(desktop_picture.localFile)}
+        alt={title}
+      />
+      <div className="wrapper">
+        <div className="game-info">
+          <h2 className="section__headline">{title}</h2>
+          <p>{description}</p>
+          <h3>What people say:</h3>
+          <div className="reviews-stack">
+            {reviews.map(singleReview => {
+              const { id, author, review, score } = singleReview
+              return (
+                <article key={id} className="review-content">
+                  <p className="game-review">"{review}"</p>
+                  <p className="game-review-author">
+                    {author} - {score}
+                  </p>
+                </article>
+              )
+            })}
+          </div>
+          <h3>Available on:</h3>
+          <div className="platform-stack">
+            {platforms.map(platform => (
+              <Link key={platform.id} className="game-store-link" to="#">
+                <PlatformIcon platform={platform} size={30} />
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="game-info">
-        <Link to={`/${slug}`}>
-          <h3>{title}</h3>
-        </Link>
-        <p>{description}</p>
-        <a href="#" className="btn btn-game">
-          Visit
-        </a>
-      </div>
-    </article>
+    </section>
   )
 }
 

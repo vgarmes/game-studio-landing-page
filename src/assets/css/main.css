@@ -708,30 +708,56 @@ a {
 
 .section-content.single-game {
   margin-top: 0;
-  position: relative;
 }
 
 .game-image {
-  position: absolute;
-  min-height: 300px;
-  max-height: 400px;
-  top: 0;
-  left: 0;
+  min-height: 200px;
+  height: 50vh;
 }
 
 .game-info {
-  width: 100%;
-  padding: 1em 2em;
+  text-align: center;
 }
 
 .game-info h3 {
-  font-size: 2.5rem;
-  color: black;
+  margin: 1em 0;
+}
+
+.reviews-stack {
+  display: flex;
+  align-items: center;
+}
+
+.review-content {
+  width: 100%;
+}
+
+.review-content + .review-content {
+  margin-left: 2em;
+}
+.game-review {
+  font-style: italic;
+  font-weight: 300;
   margin-bottom: 1em;
 }
 
-.game-info p {
-  margin-bottom: 2em;
+.game-review-author {
+  font-weight: 600;
+}
+
+.platform-stack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-store-link {
+  margin: 0 2em;
+  color: var(--clr-neutral-9);
+}
+
+.game-store-link:hover {
+  color: var(--clr-accent-2);
 }
 
 .btn-game {
@@ -740,71 +766,6 @@ a {
   font-size: 1rem;
   font-weight: 500;
   margin-top: 30px;
-}
-
-.game-reviews {
-  margin: 0 auto;
-  /*margin-top: 4rem;*/
-  width: 100%;
-  /* have to have a height */
-  height: 10em;
-  max-width: 800px;
-  text-align: center;
-  position: relative;
-  display: flex;
-  overflow: hidden;
-}
-
-.game-review {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.game-review.activeSlide {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.game-review.lastSlide {
-  transform: translateX(-100%);
-}
-
-.game-review.nextSlide {
-  transform: translateX(100%);
-}
-
-.btn-prev,
-.btn-next {
-  position: absolute;
-  top: 200px;
-  transform: translateY(-50%);
-  background: var(--clr-grey-5);
-  color: var(--clr-white);
-  width: 1.25rem;
-  height: 1.25rem;
-  display: grid;
-  place-items: center;
-  border-color: transparent;
-  font-size: 1rem;
-  border-radius: var(--radius);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.btn-prev:hover,
-.btn-next:hover {
-  background: var(--clr-primary-5);
-}
-.btn-prev {
-  left: 0;
-}
-.btn-next {
-  right: 0;
 }
 
 /* ============== */

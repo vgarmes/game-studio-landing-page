@@ -18,10 +18,18 @@ export const query = graphql`
     strapiGame(title: { eq: $title }) {
       title
       description
+      short_description
       cover {
         localFile {
           childImageSharp {
             gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+          }
+        }
+      }
+      desktop_picture {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
           }
         }
       }
