@@ -1,35 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import ReviewsSlider from "../../components/ReviewsSlider"
 import Layout from "../../components/Layout"
+import Game from "../../components/Game"
 
 const GameTemplate = ({ data }) => {
-  const {
-    title,
-    description,
-    cover,
-    release_date,
-    reviews,
-    platforms,
-  } = data.strapiGame
-
-  const pathToImage = getImage(cover.localFile)
+  const game = data.strapiGame
 
   return (
     <Layout>
-      <article className="game">
-        <GatsbyImage image={pathToImage} className="game-img" alt={title} />
-        <div className="game-info">
-          <h3>{title}</h3>
-
-          <h4>Relased: {release_date}</h4>
-          <p className="game-description">{description}</p>
-          <div className="game-reviews">
-            <ReviewsSlider reviews_data={reviews} />
-          </div>
-        </div>
-      </article>
+      <Game {...game} />
     </Layout>
   )
 }
