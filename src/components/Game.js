@@ -33,9 +33,8 @@ const Game = ({
               return (
                 <article key={id} className="review-content">
                   <p className="game-review">"{review}"</p>
-                  <p className="game-review-author">
-                    {author} - {score}
-                  </p>
+                  <p className="game-review-author">{score}</p>
+                  <p className="game-review-author">{author}</p>
                 </article>
               )
             })}
