@@ -1,9 +1,7 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import ReviewsSlider from "./ReviewsSlider"
 import PlatformIcon from "./PlatformIcon"
 import { Link } from "gatsby"
-import { SiPlaystation4, SiNintendoswitch, SiSteam } from "react-icons/si"
 
 const Game = ({
   platforms,
